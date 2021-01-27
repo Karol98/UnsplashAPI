@@ -10,4 +10,20 @@
   position: relative;
   top: 200px;
 }
+#img__wrap .img__description {
+  position: relative;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+#img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
 /*# sourceMappingURL=styl.css.map */

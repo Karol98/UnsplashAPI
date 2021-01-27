@@ -21,6 +21,7 @@ export default function Home() {
 
     const getPhoto = async e => {
         e.preventDefault();
+        console.log("szukam zdjęć");
         let x = await unsplash.search.getPhotos({
             query: keyWord.current.value,
             page: 1,
@@ -28,20 +29,22 @@ export default function Home() {
             orientation: 'portrait',
         });
         console.log(x.response.results);
-        SetRandomPhotos(x.response.results);
+        SetRandomPhotos(x);
 
     }
 
     async function getRandom() {
+        console.log("ładuje losowe zdjęcia")
         let x = await unsplash.photos.getRandom({
             count: 10,
+            mode: 'no-cors',
             orientation: 'portrait',
         });
         SetRandomPhotos(x.response);
     }
 
-    useEffect(() => {
-        (getRandom())
+    useEffect((e) => {
+        (getRandom(e))
     }, []);
 
 
@@ -59,7 +62,11 @@ export default function Home() {
                 </div>
             </div>
             {randomPhotos === undefined ? null : <Body photos={randomPhotos}/>}
-
+            <div className="d-flex justify-content-center">
+                <form onSubmit={getRandom}>
+                    <button className="btn-primary">Przewijaj dalej</button>
+                </form>
+            </div>
             <Footer/>
         </>
     )

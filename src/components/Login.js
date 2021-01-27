@@ -23,7 +23,6 @@ export default function Login() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-
         try {
             setError("")
             setLoading(true)
@@ -38,19 +37,15 @@ export default function Login() {
 
 
     function SignIn() {
-
         const signInWithGoogle = () => {
             const provider = new firebase.auth.GoogleAuthProvider();
             auth.signInWithPopup(provider);
         }
-
         return (
             <>
                 <Button className="w-100" onClick={signInWithGoogle}>Zaloguj się przez google</Button>
-
             </>
         )
-
     }
 
     return (
