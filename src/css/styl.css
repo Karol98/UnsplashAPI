@@ -43,11 +43,14 @@
   color: #fff;
   visibility: hidden;
   opacity: 0;
-  /* transition effect. not necessary */
   transition: opacity 0.2s, visibility 0.2s;
 }
 #img__wrap:hover .img__description {
   visibility: visible;
   opacity: 1;
+}
+.sorting {
+  position: absolute;
+  width: 8%;
 }
 /*# sourceMappingURL=styl.css.map */

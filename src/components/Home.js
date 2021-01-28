@@ -1,14 +1,13 @@
 import React, {useState, useEffect, useRef} from "react"
 import NaviBar from "./NaviBar";
 import Footer from "./Footer";
-import Body from "./Body";
+import Photos from "./Photos";
 import '../css/styl.css'
 import nodeFetch from 'node-fetch';
 import {createApi} from 'unsplash-js';
 import logo from '../img/logo.png';
 
 export default function Home() {
-
     const [randomPhotos, SetRandomPhotos] = useState();
     const keyWord = useRef();
     const numberOfResultsRandom = useRef();
@@ -21,8 +20,8 @@ export default function Home() {
 
     async function getRandom(e) {
         e.preventDefault();
-        let y=10;
-        if(numberOfResultsRandom.current.value !== "") {
+        let y = 10;
+        if (numberOfResultsRandom.current.value !== "") {
             y = numberOfResultsRandom.current.value;
         }
         let x = await unsplash.photos.getRandom({
@@ -35,8 +34,8 @@ export default function Home() {
 
     const getPhoto = async e => {
         e.preventDefault();
-        let y=10;
-        if(numberOfResults.current.value >= 0 && numberOfResults.current.value < 100) {
+        let y = 10;
+        if (numberOfResults.current.value >= 0 && numberOfResults.current.value < 100) {
             y = numberOfResults.current.value;
         }
         let x = await unsplash.search.getPhotos({
@@ -55,6 +54,7 @@ export default function Home() {
             orientation: 'portrait',
         });
         SetRandomPhotos(x.response);
+        console.log(x.response);
     };
 
     useEffect(() => {
@@ -69,16 +69,19 @@ export default function Home() {
                 <div className="container justify-content-center d-flex">
                     <img src={logo} alt="logo" className="logoUnsplash"/>
                     <form onSubmit={getPhoto} className="w-25 justify-content-center text-center">
-                        <input type="number" className="form-control" ref={numberOfResults} placeholder="Ile zdjęć checsz wyszukiwać" />
-                        <input type="text" className="mt-2 form-control" placeholder="Słowo klucz" ref={keyWord} required/>
-                        <button className="btn-primary mt-4">Wyszukaj zdjęcia</button>
+                        <input type="number" className="form-control" ref={numberOfResults}
+                               placeholder="Ile zdjęć checsz wyszukiwać"/>
+                        <input type="text" className="mt-2 form-control" placeholder="Słowo klucz" ref={keyWord}
+                               required/>
+                        <button className="btn-primary form-control mt-4">Wyszukaj zdjęcia</button>
                     </form>
                 </div>
             </div>
-            {randomPhotos === undefined ? null : <Body photos={randomPhotos}/>}
+            {randomPhotos === undefined ? null : <Photos photos={randomPhotos}/>}
             <div className="d-flex justify-content-center">
                 <form onSubmit={getRandom}>
-                    <input type="number" className="form-control" ref={numberOfResultsRandom} placeholder="Ilość losowych zdjęć"/>
+                    <input type="number" className="form-control" ref={numberOfResultsRandom}
+                           placeholder="Ilość losowych zdjęć"/>
                     <button className="mt-3 btn-primary form-control">Przewijaj dalej</button>
                 </form>
             </div>
