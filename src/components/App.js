@@ -7,14 +7,17 @@ import ForgotPassword from "./ForgotPassword"
 import Chat from "./Chat";
 import Home from "./Home"
 import Signup from "./Signup";
+import FindUserCollection from "./FindUserCollection";
 
 function App() {
+
   return (
         <Router>
           <AuthProvider>
             <Switch>
               <PrivateRoute path="/home" component={Home} />
               <PrivateRoute path="/chat" component={Chat}/>
+              <Route path="/usercollection" component={FindUserCollection} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/" component={Home} />

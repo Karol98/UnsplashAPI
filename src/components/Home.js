@@ -3,20 +3,14 @@ import NaviBar from "./NaviBar";
 import Footer from "./Footer";
 import Photos from "./Photos";
 import '../css/styl.css'
-import nodeFetch from 'node-fetch';
-import {createApi} from 'unsplash-js';
 import logo from '../img/logo.png';
+import unsplash from '../contexts/unsplash'
 
 export default function Home() {
     const [randomPhotos, SetRandomPhotos] = useState();
     const keyWord = useRef();
     const numberOfResultsRandom = useRef();
     const numberOfResults = useRef();
-
-    const unsplash = createApi({
-        accessKey: 'ot1DbXB4IikmR2QOHGacf4ADbnOauST1OrwTH3lNBPc',
-        fetch: nodeFetch,
-    });
 
     async function getRandom(e) {
         e.preventDefault();

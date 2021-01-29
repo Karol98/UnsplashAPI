@@ -34,6 +34,9 @@
   position: relative;
   top: 200px;
 }
+#img__wrap {
+  transition: transform 0.2s;
+}
 #img__wrap .img__description {
   position: relative;
   bottom: 24px;
@@ -45,6 +48,9 @@
   opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
 }
+#img__wrap:hover {
+  transform: scale(1.1);
+}
 #img__wrap:hover .img__description {
   visibility: visible;
   opacity: 1;
@@ -52,5 +58,24 @@
 .sorting {
   position: absolute;
   width: 8%;
+}
+#collection4 .coll1 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 20% 40%;
+  border: 3px solid black;
+}
+#pointer__collection:hover {
+  filter: saturate(150%) brightness(120%) contrast(110%);
+  box-shadow: 20px 20px 20px black;
+  transition: box-shadow 0.1s;
+  cursor: pointer;
+}
+.button_back {
+  position: relative;
+  max-width: 5%;
+  left: 47%;
+  bottom: 5%;
 }
 /*# sourceMappingURL=styl.css.map */
