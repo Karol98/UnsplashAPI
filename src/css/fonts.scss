@@ -1,0 +1,15 @@
+$sans-serif: "Source Sans Pro", Helvetica, Verdana, sans-serif;
+$serif: Merriweather, Georgia, "Times New Roman", serif;
+$txt-primary: black;
+$mono: "Source Code Pro", Courier, mono;
+$light: 500;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+.collection_title {
+  font-family: $serif;
+  font-weight: $light;
+  color: $txt-primary;
+  -webkit-text-size-adjust: 100%;
+}

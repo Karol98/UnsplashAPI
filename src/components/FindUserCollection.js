@@ -1,29 +1,39 @@
-import React, {useState, useEffect, useRef} from "react"
+import React, {useState, useRef} from "react"
 import NaviBar from "./NaviBar";
 import Footer from "./Footer";
-import Photos from "./Photos";
 import '../css/styl.css'
 import unsplash from "../contexts/unsplash";
 import logo from '../img/logo.png';
 import ListCollections from "./ListCollections";
+import ErrorHandling from "./ErrorHandling";
+
 export default function FindUserCollection() {
 
     const [listOfCollections, SetListOfCollections] = useState();
     const username = useRef();
+    const [error, SetError] = useState();
 
     async function getUserCollection(e) {
         e.preventDefault();
-        let x = await unsplash.users.getCollections({
+        await unsplash.users.getCollections({
             username: username.current.value,
-        });
-        SetListOfCollections(x.response.results);
+        }).then(response => {
+            if (response.response.results.length !== 0) {
+                SetListOfCollections(response.response.results);
+                SetError(undefined);
+            } else
+                SetError("Użytkownik nie posiada żadnych kolekcji");
+        }).catch(err => {
+            SetListOfCollections(undefined);
+            SetError("Błąd nie znaleziono użytkownika");
+        })
     }
 
     return (
         <>
             <NaviBar/>
             <meta charSet="utf-8"/>
-            <div className="jumbotron">
+            <div className="jumbotron_collection jumbotron">
                 <div className="container justify-content-center d-flex">
                     <img src={logo} alt="logo" className="logoUnsplash"/>
                     <form onSubmit={getUserCollection} className="w-25 justify-content-center text-center">
@@ -33,6 +43,7 @@ export default function FindUserCollection() {
                     </form>
                 </div>
             </div>
+            {error === undefined ? null : <ErrorHandling error={error}/>}
             {listOfCollections === undefined ? null : <ListCollections collections={listOfCollections}/>}
             <Footer/>
         </>

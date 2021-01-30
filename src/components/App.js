@@ -6,9 +6,10 @@ import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import Chat from "./Chat";
 import Home from "./Home"
+import { useSelector } from 'react-redux';
 import Signup from "./Signup";
 import FindUserCollection from "./FindUserCollection";
-
+import YourCollection from "./YourCollection";
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
               <PrivateRoute path="/chat" component={Chat}/>
               <Route path="/usercollection" component={FindUserCollection} />
               <Route path="/signup" component={Signup} />
+              <Route path="/yourcollection" component={YourCollection} />
               <Route path="/login" component={Login} />
               <Route path="/" component={Home} />
               <Route path="/forgot-password" component={ForgotPassword} />

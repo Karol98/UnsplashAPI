@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import '../css/styl.css'
 import unsplash from "../contexts/unsplash";
 import Photos from "./Photos";
+import '../css/fonts.scss'
 
 export default function ListCollections(props) {
 

@@ -24,11 +24,12 @@ export default function NaviBar() {
                             className="sr-only">(current)</span></a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/usercollection"> <a className="nav-link">Kolekcje</a></Link>
+                        <Link to="/yourcollection"> <a className="nav-link">Twoja kolekcja</a></Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link">O nas</a>
+                        <Link to="/usercollection"> <a className="nav-link">Kolekcje innych</a></Link>
                     </li>
+
 
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
