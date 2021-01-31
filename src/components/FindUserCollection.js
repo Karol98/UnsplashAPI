@@ -2,7 +2,7 @@ import React, {useState, useRef} from "react"
 import NaviBar from "./NaviBar";
 import Footer from "./Footer";
 import '../css/styl.css'
-import unsplash from "../contexts/unsplash";
+import unsplash from "../apiInitializate/unsplash";
 import logo from '../img/logo.png';
 import ListCollections from "./ListCollections";
 import ErrorHandling from "./ErrorHandling";
@@ -43,7 +43,7 @@ export default function FindUserCollection() {
                     </form>
                 </div>
             </div>
-            {error === undefined ? null : <ErrorHandling error={error}/>}
+            {error === undefined ? null : <ErrorHandling type="danger" error={error}/>}
             {listOfCollections === undefined ? null : <ListCollections collections={listOfCollections}/>}
             <Footer/>
         </>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../css/styl.css'
-import unsplash from "../contexts/unsplash";
+import unsplash from "../apiInitializate/unsplash";
 import Photos from "./Photos";
 import '../css/fonts.scss'
 

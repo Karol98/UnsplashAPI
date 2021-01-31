@@ -4,9 +4,13 @@ import '../css/styl.css'
 import {addPhoto} from "../store/photos/Collection";
 import {useDispatch} from "react-redux";
 import collect from '../img/collection.png';
+import ErrorHandling from "./ErrorHandling";
+import {useAuth} from "../contexts/AuthContext";
 
 export default function Photos(props) {
 
+    const {currentUser} = useAuth()
+    const [error, SetError] = useState();
     const [forceUpdate, SetForceUpdate] = useState(1);
     const sortType = useRef();
     const dispatch = useDispatch();
@@ -26,9 +30,12 @@ export default function Photos(props) {
     }
 
     function addToCollection(data) {
-        dispatch(addPhoto(data))
+        dispatch(addPhoto(data));
+        SetError("Udało się");
+        setTimeout(function () {
+            SetError(undefined);
+        }, 4000);
     }
-
 
     return (
         <>
@@ -43,14 +50,15 @@ export default function Photos(props) {
                     <button type="submit" className="form-control btn-success mt-1">Sortuj</button>
                 </form>
             </div>
+            {error === undefined ? null : <ErrorHandling type={"success"} error={error}/>}
             <div className="w-100">
                 <div className="row justify-content-md-center">
-                    {props.photos.map((data, index) => {
+                    {props.photos.map(data => {
                         return (
                             <div id="img__wrap" className="col-xl-3 col-sm-5   m-2">
                                 <img className="img__img w-100" src={data.urls.small}/>
                                 <p className="img__description ">@Author: {data.user.username}</p>
-                                {props.myCollection ? null :
+                                {props.myCollection || !currentUser ? null :
                                     <div className="img__button " onClick={() => addToCollection(data)}><img
                                         src={collect} alt="add to"/></div>}
                             </div>

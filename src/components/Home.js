@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Photos from "./Photos";
 import '../css/styl.css'
 import logo from '../img/logo.png';
-import unsplash from '../contexts/unsplash'
+import unsplash from '../apiInitializate/unsplash'
 
 export default function Home() {
     const [randomPhotos, SetRandomPhotos] = useState();
