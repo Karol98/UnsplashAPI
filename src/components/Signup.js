@@ -2,6 +2,7 @@ import React, {useRef, useState} from "react"
 import {Form, Button, Card, Alert} from "react-bootstrap"
 import {useAuth} from "../contexts/AuthContext"
 import {Link, useHistory} from "react-router-dom"
+import NaviBar from "./NaviBar";
 
 export default function Signup() {
     const emailRef = useRef()
@@ -33,9 +34,10 @@ export default function Signup() {
 
     return (
         <>
-            <Card>
+            <NaviBar/>
+            <Card className="align-items-center mt-5 justify-content-center w-100 d-flex">
                 <Card.Body>
-                    <h2 className="text-center mb-4">Sign Up</h2>
+                    <h2 className="text-center mb-4">Zarejestruj się</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">

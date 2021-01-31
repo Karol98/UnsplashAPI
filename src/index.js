@@ -3,13 +3,11 @@ import ReactDOM from "react-dom"
 import App from "./components/App"
 import "bootstrap/dist/css/bootstrap.min.css"
 import {Provider} from 'react-redux'
-import {createApi} from "unsplash-js";
-import nodeFetch from "node-fetch";
 import { createStore } from 'redux';
-import {connect} from "react-redux"
-import birdApp from "./store/birds/birds";
+import { composeWithDevTools } from 'redux-devtools-extension'
+import photoApp from "./store/photos/Collection";
 
-const store = createStore(birdApp);
+const store = createStore(photoApp, composeWithDevTools());
 
 ReactDOM.render(
     <React.StrictMode>
@@ -19,5 +17,3 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById("root")
 )
-
-

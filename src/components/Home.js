@@ -48,7 +48,6 @@ export default function Home() {
             orientation: 'portrait',
         });
         SetRandomPhotos(x.response);
-        console.log(x.response);
     };
 
     useEffect(() => {
@@ -71,7 +70,7 @@ export default function Home() {
                     </form>
                 </div>
             </div>
-            {randomPhotos === undefined ? null : <Photos photos={randomPhotos}/>}
+            {randomPhotos === undefined ? null : <Photos photos={randomPhotos} myCollection={false}/>}
             <div className="d-flex justify-content-center">
                 <form onSubmit={getRandom}>
                     <input type="number" className="form-control" ref={numberOfResultsRandom}

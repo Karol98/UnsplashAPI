@@ -43,8 +43,10 @@ export default function ListCollections(props) {
     } else {
         return (
             <>
-                <button className="button_back btn-primary mb-4 form-control" onClick={() => SetCollectionPhotos(undefined)}> Wróć</button>
-                <Photos photos={collectionPhotos}/>
+                <button className="button_back btn-primary mb-4 form-control"
+                        onClick={() => SetCollectionPhotos(undefined)}> Wróć
+                </button>
+                <Photos photos={collectionPhotos} myCollection={false}/>
             </>
         )
     }

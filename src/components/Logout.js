@@ -6,7 +6,7 @@ import {useHistory} from "react-router-dom";
 export default function Logout() {
 
     const [error, setError] = useState("")
-    const { currentUser, logout } = useAuth()
+    const {currentUser, logout} = useAuth()
     const history = useHistory()
 
     async function handleLogout() {
@@ -21,7 +21,7 @@ export default function Logout() {
     }
 
     return (
-        <Button  className="btn-primary" onClick={handleLogout}>
+        <Button className="btn-primary" onClick={handleLogout}>
             Wyloguj
         </Button>
 

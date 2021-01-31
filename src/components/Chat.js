@@ -5,14 +5,12 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
 import {useCollectionData} from 'react-firebase-hooks/firestore';
-
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 
 function Chat() {
     return (
         <>
-
             <div className="App">
                 <div id="chat">
                     <section>
@@ -83,6 +81,5 @@ function ChatMessage(props) {
         </div>
     </>)
 }
-
 
 export default Chat;
