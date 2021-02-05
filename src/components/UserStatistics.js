@@ -62,7 +62,7 @@ export default function UserStatistics() {
                 <div className="container justify-content-center d-flex">
                     <img src={logo} alt="logo" className="logoUnsplash"/>
                     <form onSubmit={handleSearch} className="w-25 justify-content-center text-center ">
-                        <input type="text" className="mt-2 form-control" placeholder="ID zdjęcia" ref={userName}
+                        <input type="text" className="mt-2 form-control" placeholder="Nazwa użytkownika" ref={userName}
                                required/>
                         <button className="btn-primary form-control mt-4">Pokaż statystyki</button>
                     </form>
