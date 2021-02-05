@@ -47,8 +47,9 @@ export default function Home() {
             mode: 'no-cors',
             orientation: 'portrait',
         });
-        SetRandomPhotos(x.response);
-    };
+       SetRandomPhotos(x.response);
+
+    }
 
     useEffect(() => {
         (initPagePhotos())

@@ -8,7 +8,7 @@ import Home from "./Home"
 import Signup from "./Signup";
 import FindUserCollection from "./FindUserCollection";
 import YourCollection from "./YourCollection";
-
+import PhotoStatistics from "./PhotoStatistics";
 function App() {
 
     return (
@@ -18,9 +18,10 @@ function App() {
                     <Route path="/usercollection" component={FindUserCollection}/>
                     <Route path="/signup" component={Signup}/>
                     <PrivateRoute path="/yourcollection" component={YourCollection}/>
+                    <Route path="/photostatistics" component={PhotoStatistics}/>
                     <Route path="/login" component={Login}/>
-                    <Route path="/" component={Home}/>
                     <Route path="/forgot-password" component={ForgotPassword}/>
+                    <Route path="/" component={Home}/>
                 </Switch>
             </AuthProvider>
         </Router>

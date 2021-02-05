@@ -29,8 +29,9 @@ export default function NaviBar() {
                     <li className="nav-item">
                         <Link to="/usercollection"> <a className="nav-link">Kolekcje innych</a></Link>
                     </li>
-
-
+                    <li className="nav-item">
+                        <Link to="/photostatistics"> <a className="nav-link">Statystyki zdjęć</a></Link>
+                    </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
                     {!user ? <Link to="/login">

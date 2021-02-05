@@ -1,159 +1,153 @@
 @keyframes filter {
-    0% {
-        filter: invert(70%) sepia(20%) saturate(100%) brightness(100%) contrast(100%);
-    }
-    25% {
-        filter: invert(60%) sepia(60%) saturate(100%) brightness(100%) contrast(100%);
-    }
-    50% {
-        filter: invert(60%) sepia(100%) saturate(100%) brightness(100%) contrast(100%);
-    }
-    75% {
-        filter: invert(60%) sepia(50%) saturate(100%) brightness(100%) contrast(100%);
-    }
-    100% {
-        filter: invert(70%) sepia(20%) saturate(100%) brightness(100%) contrast(100%);
-    }
+  0% {
+    filter: invert(70%) sepia(20%) saturate(100%) brightness(100%) contrast(100%);
+  }
+  25% {
+    filter: invert(60%) sepia(60%) saturate(100%) brightness(100%) contrast(100%);
+  }
+  50% {
+    filter: invert(60%) sepia(100%) saturate(100%) brightness(100%) contrast(100%);
+  }
+  75% {
+    filter: invert(60%) sepia(50%) saturate(100%) brightness(100%) contrast(100%);
+  }
+  100% {
+    filter: invert(70%) sepia(20%) saturate(100%) brightness(100%) contrast(100%);
+  }
 }
-
 .jumbotron {
-    margin: 0;
-    padding: 20px;
-    height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/backgroundjumbootron.jfif");
-    background-size: 2000px;
-    background-position: center;
+  margin: 0;
+  padding: 20px;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/backgroundjumbootron.jfif");
+  background-size: 2000px;
+  background-position: center;
 }
-
 .jumbotron .logoUnsplash {
-    position: absolute;
-    top: -5%;
-    animation-name: filter;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  top: -5%;
+  animation-name: filter;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
 }
-
 .jumbotron form {
-    position: relative;
-    top: 200px;
+  position: relative;
+  top: 200px;
 }
-
 .jumbotron_collection {
-    margin: 0;
-    padding: 20px;
-    height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../img/backgroundjumbotrooncollection.jpg");
-    background-size: 2000px;
-    background-position: center;
+  margin: 0;
+  padding: 20px;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../img/backgroundjumbotrooncollection.jpg");
+  background-size: 2000px;
+  background-position: center;
 }
-
 .jumbotron_collection .logoUnsplash {
-    position: absolute;
-    top: -5%;
-    animation-name: filter;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  top: -5%;
+  animation-name: filter;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
 }
-
 .jumbotron_collection form {
-    position: relative;
-    top: 200px;
+  position: relative;
+  top: 200px;
 }
-
 .jumbotron_yourcollection {
-    margin: 0;
-    padding: 20px;
-    height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/background.jpg");
-    background-size: 2000px;
-    background-position: center;
+  margin: 0;
+  padding: 20px;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/background.jpg");
+  background-size: 2000px;
+  background-position: center;
 }
-
 .jumbotron_yourcollection .logoUnsplash {
-    position: absolute;
-    top: -5%;
-    animation-name: filter;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  top: -5%;
+  animation-name: filter;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
 }
-
 .jumbotron_yourcollection form {
-    position: relative;
-    top: 200px;
+  position: relative;
+  top: 200px;
 }
-
 #img__wrap {
-    transition: transform 0.2s;
+  transition: transform 0.2s;
 }
-
 #img__wrap .img__description {
-    position: relative;
-    bottom: 24px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.72);
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s, visibility 0.2s;
+  position: relative;
+  bottom: 48px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
 }
-
 #img__wrap .img__button {
-    position: absolute;
-    top: 0px;
-    right: 20px;
-    cursor: pointer;
-    visibility: hidden;
-    background: rgba(1, 1, 1, 0.72);
-    font-size: 30px;
-    color: white;
-    transition: opacity 0.2s, visibility 0.2s;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  cursor: pointer;
+  visibility: hidden;
+  background: rgba(1, 1, 1, 0.72);
+  font-size: 30px;
+  color: white;
+  transition: opacity 0.2s, visibility 0.2s;
 }
-
 #img__wrap .img__button img {
-    width: 25px;
-    height: 30px;
+  width: 25px;
+  height: 30px;
 }
-
 #img__wrap:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 #img__wrap:hover .img__description {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
-
 #img__wrap:hover .img__button {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
-
 .sorting {
-    position: absolute;
-    width: 8%;
+  position: absolute;
+  width: 8%;
 }
-
 #collection4 .coll1 {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: 20% 40%;
-    border: 3px solid black;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 20% 40%;
+  border: 3px solid black;
 }
-
 #pointer__collection:hover {
-    filter: saturate(150%) brightness(120%) contrast(110%);
-    box-shadow: 20px 20px 20px black;
-    transition: box-shadow 0.1s;
-    cursor: pointer;
+  filter: saturate(150%) brightness(120%) contrast(110%);
+  box-shadow: 20px 20px 20px black;
+  transition: box-shadow 0.1s;
+  cursor: pointer;
 }
-
 .button_back {
-    position: relative;
-    max-width: 5%;
-    left: 47%;
-    bottom: 5%;
+  position: relative;
+  max-width: 5%;
+  left: 47%;
+  bottom: 5%;
 }
-
+.jumbotron_statistics {
+  margin: 0;
+  padding: 20px;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/jumbotronstatistics.jpg");
+  background-size: 2000px;
+  background-position: center;
+}
+.jumbotron_statistics .logoUnsplash {
+  position: absolute;
+  top: -5%;
+  animation-name: filter;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
 /*# sourceMappingURL=styl.css.map */

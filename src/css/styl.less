@@ -92,7 +92,7 @@
 
   .img__description {
     position: relative;
-    bottom: 24px;
+    bottom: 48px;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.72);
@@ -101,6 +101,7 @@
     opacity: 0;
     transition: opacity .2s, visibility .2s;
   }
+
   .img__button {
     position: absolute;
     top: 0px;
@@ -111,6 +112,7 @@
     font-size: 30px;
     color: white;
     transition: opacity .2s, visibility .2s;
+
     img {
       width: 25px;
       height: 30px;
@@ -124,10 +126,11 @@
 
 #img__wrap:hover {
 
- .img__description {
-   visibility: visible;
-   opacity: 1;
- }
+  .img__description {
+    visibility: visible;
+    opacity: 1;
+  }
+
   .img__button {
     visibility: visible;
     opacity: 1;
@@ -163,4 +166,21 @@
   bottom: 5%;
 }
 
+
+.jumbotron_statistics {
+  margin: 0;
+  padding: 20px;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/jumbotronstatistics.jpg");
+  background-size: 2000px;
+  background-position: center;
+
+  .logoUnsplash {
+    position: absolute;
+    top: -5%;
+    animation-name: filter;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+  }
+}
 

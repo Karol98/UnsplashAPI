@@ -57,7 +57,7 @@ export default function Photos(props) {
                         return (
                             <div id="img__wrap" className="col-xl-3 col-sm-5   m-2">
                                 <img className="img__img w-100" src={data.urls.small}/>
-                                <p className="img__description ">@Author: {data.user.username}</p>
+                                <p className="img__description ">@Author: {data.user.username} <br/> @Id: {data.id} </p>
                                 {props.myCollection || !currentUser ? null :
                                     <div className="img__button " onClick={() => addToCollection(data)}><img
                                         src={collect} alt="add to"/></div>}

@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux';
 
+
 const ADD_PHOTO = 'ADD_PHOTO';
+
 
 export function addPhoto(photo) {
     return {
@@ -10,8 +12,9 @@ export function addPhoto(photo) {
 }
 
 const defaultPhotos = {
-    photos: []
+    photos: [],
 }
+
 
 function collection(state = defaultPhotos, action) {
     switch (action.type) {
@@ -27,5 +30,6 @@ function collection(state = defaultPhotos, action) {
 const photoApp = combineReducers({
     yourcollection: collection
 });
+
 
 export default photoApp;
