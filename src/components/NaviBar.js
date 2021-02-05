@@ -9,6 +9,7 @@ const auth = firebase.auth();
 
 export default function NaviBar() {
     const [user] = useAuthState(auth);
+
     return (
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a className="navbar-brand">UnSplashApi</a>
@@ -31,6 +32,9 @@ export default function NaviBar() {
                     </li>
                     <li className="nav-item">
                         <Link to="/photostatistics"> <a className="nav-link">Statystyki zdjęć</a></Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/userstatistics"> <a className="nav-link">Statystyki użytkowników</a></Link>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">

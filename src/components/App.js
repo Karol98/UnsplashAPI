@@ -9,6 +9,8 @@ import Signup from "./Signup";
 import FindUserCollection from "./FindUserCollection";
 import YourCollection from "./YourCollection";
 import PhotoStatistics from "./PhotoStatistics";
+import UserStatistics from "./UserStatistics";
+
 function App() {
 
     return (
@@ -19,6 +21,7 @@ function App() {
                     <Route path="/signup" component={Signup}/>
                     <PrivateRoute path="/yourcollection" component={YourCollection}/>
                     <Route path="/photostatistics" component={PhotoStatistics}/>
+                    <Route path="/userstatistics" component={UserStatistics}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/forgot-password" component={ForgotPassword}/>
                     <Route path="/" component={Home}/>

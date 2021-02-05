@@ -38,7 +38,7 @@ export default function Photos(props) {
     }
 
     return (
-        <>
+        <div className="mt-5">
             <NaviBar/>
             <div id="myHeader">
                 <form onSubmit={sortData} className="sorting">
@@ -66,6 +66,6 @@ export default function Photos(props) {
                     })}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
