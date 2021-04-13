@@ -2,4 +2,4 @@
 
 https://unsplashapi-ks.herokuapp.com/
 
-![Alt Text](https://media.giphy.com/media/QYdqFycYA84IZyFaKE/giphy.gif)
+![Gif](https://media.giphy.com/media/QYdqFycYA84IZyFaKE/giphy.gif)
