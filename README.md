@@ -6,7 +6,7 @@ Simple user interface for UnsplashAPI
 
 # Demo
 
-You can find working heroku app demo [here](https://unsplashapi-ks.herokuapp.com/) on heroku.
+You can find working heroku app demo [here](https://unsplashapi-ks.herokuapp.com/).
 
 # Installation
 
