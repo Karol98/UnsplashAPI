@@ -15,4 +15,6 @@ To run the app locally you will need node.js and npm
     $ npm install
     $ npm start
     
-    
+# Loggin and Authorization
+
+if you want login and registration to work, you have to enter your ApiKey in /src/apiinitalizate/firebase, mine has been deactivated due to costs.
